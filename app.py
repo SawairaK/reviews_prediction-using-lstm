@@ -1,9 +1,11 @@
 import streamlit as st
 import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Embedding, LSTM, Dense, Bidirectional
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import pickle
 
-# Load the saved model
+# Load the model
 model = tf.keras.models.load_model('sentiment_model.h5')
 
 # Load tokenizer
